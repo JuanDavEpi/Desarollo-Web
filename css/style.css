@@ -1,75 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     outline: none;
     border: none;
     box-sizing: border-box;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
-h1{
+h1 {
     text-align: center;
     justify-content: center;
     color: #000000;
 
 }
 
-.MYC{
+.MYC {
     font-size: 1rem;
     margin: 0px;
 }
 
 
-img{
+img {
     width: 100%;
     display: flex;
 }
 
 
-a{
-    text-decoration: none;
+a {
+    text-decoration: none !important;
     color: #fff;
+    font-weight: 400;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
 }
 
-nav{
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-}
+/**! NAV  PARA LAS 3 PAGINAS**/
 
-.nav-all{
+.nav-all {
     background-color: #f5f5f5;
     width: 100%;
     position: fixed;
 }
 
-img{
-    width: 100%;
+nav {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
-.nav-logo{
+.nav-logo {
     max-width: 70px;
 }
 
-.links-del-nav{
+.links-del-nav {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 3rem;
 }
 
-.enlace a{
+.enlace a {
     position: relative;
     padding-bottom: 0.75rem;
     color: #000000;
@@ -77,7 +75,7 @@ img{
 
 /** Hover para los links, **/
 
-.enlace a::after{
+.enlace a::after {
     content: "";
     position: absolute;
     height: 3px;
@@ -88,13 +86,13 @@ img{
     transition: all 0.3s ease;
 }
 
-.enlace a:hover::after{
+.enlace a:hover::after {
     width: 100%;
 }
 
 /** Custom button **/
 
-.boton{
+.boton {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
@@ -104,7 +102,7 @@ img{
     transition: all 0.9s ease;
 }
 
-.boton:hover{
+.boton:hover {
     background-color: #cf1b1b;
     transform: scale(1.1);
 }
@@ -113,15 +111,12 @@ img{
 
 /*!Seccion HERO*/
 
-.hero {
+.hero{
     display: flex;
     height: 1300px;
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url("/img/pexels-christina-morillo-1181675.jpg");
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("/img/pexels-christina-morillo-1181675.jpg");
     background-size: 2253px 1300px;
     justify-content: center;
     align-items: center;
@@ -134,16 +129,17 @@ img{
     font-size: 4em;
 }
 
-.hero h3{
+.hero h3 {
     color: white;
 }
-/** Programas **/
+
+/**! Programas **/
 
 .programs {
     background-color: #ebebeb;
     display: flex;
     margin: 0px 0px 25px;
-    align-items: center; 
+    align-items: center;
 }
 
 .programs-container {
@@ -158,7 +154,7 @@ img{
     font-size: 4em;
 }
 
-.all-programs-container{
+.all-programs-container {
     align-content: center;
     justify-content: center;
 }
@@ -190,41 +186,32 @@ img{
 }
 
 
-.Img{
+.Img {
     background-size: cover;
 }
 
-.Img:first-child{
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url("/img/repair.jpg");
+.Img:first-child {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("/img/repair.jpg");
 
 }
 
-.Img:nth-child(2){
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url("/img/desk-593327_1920.jpg");
+.Img:nth-child(2) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("/img/desk-593327_1920.jpg");
 
 }
 
-.Img:nth-child(3){
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url("/img/laptop-2588862_1920.jpg");
+.Img:nth-child(3) {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("/img/laptop-2588862_1920.jpg");
 
 }
 
-.text-container{
+.text-container {
     height: 1000px;
     display: flex;
     justify-content: center;
@@ -232,14 +219,14 @@ img{
 }
 
 
-.checklist{
+.checklist {
     display: flex;
     text-align: center;
     justify-content: space-around;
     padding: 50px;
 }
 
-li{
+li {
     background-color: #f5f5f5;
     list-style: none;
     padding: 5px;
@@ -251,7 +238,7 @@ li{
 
 /*?Galeria*/
 
-.merch-text{
+.merch-text {
     text-align: center;
     align-self: center;
     font-size: 4em;
@@ -259,7 +246,7 @@ li{
     margin: 25px;
 }
 
-.merch-container {  
+.merch-container {
     display: grid;
     justify-content: center;
     grid-template-columns: 0fr 1fr 1fr 1fr 0fr;
@@ -268,72 +255,72 @@ li{
     gap: 6px 6px;
     grid-auto-flow: 60%;
     grid-template-areas:
-      ". . . . ."
-      ". Area1 Area1 Area2 ."
-      ". Area5 Area3 Area2 ."
-      ". Area5 Area4 Area4 ."
-      ". . . . .";
-  }
-  
+        ". . . . ."
+        ". Area1 Area1 Area2 ."
+        ". Area5 Area3 Area2 ."
+        ". Area5 Area4 Area4 ."
+        ". . . . .";
+}
+
 .Area1 {
     grid-area: Area1;
     align-self: center;
     justify-self: center;
 }
 
-.Area1 img{
+.Area1 img {
     width: 700px;
-    height: 500px;
+    height: 700px;
 }
 
-  
-.Area2 { 
+
+.Area2 {
     grid-area: Area2;
     align-self: center;
-    justify-self: center; 
+    justify-self: center;
 }
 
-.Area2 img{
+.Area2 img {
     height: 600px;
     width: 400px;
-} 
-  
-.Area3 { 
+}
+
+.Area3 {
     grid-area: Area3;
     align-self: center;
     justify-self: center;
 }
 
-.Area3 img{
+.Area3 img {
     height: 400px;
     width: 500px;
 }
-  
-.Area4 { 
-    grid-area: Area4; 
+
+.Area4 {
+    grid-area: Area4;
     align-self: center;
     justify-self: center;
 }
 
-.Area4 img{
+.Area4 img {
     height: 300px;
     width: 800px;
 }
 
-  
-.Area5 { 
+
+.Area5 {
     grid-area: Area5;
     align-self: center;
-    justify-self: center; 
+    justify-self: center;
 }
 
-.Area5 img{
+.Area5 img {
     transform: rotate(90deg);
 }
 
 /*!Seccion con grid*/
 
-.grid-container { 
+.grid-container {
     background-color: #f5f5f5;
     display: grid;
     grid-template-columns: 0fr 1fr 1fr 1fr 0fr;
@@ -342,41 +329,42 @@ li{
     gap: 18px 18px;
     grid-auto-flow: row;
     grid-template-areas:
-      ". Section1 Section2 Section3 ."
-      ". Section4 Section4 Section4 ."
-      ". . . . .";
-      margin-bottom: 25px;
-  }
+        ". Section1 Section2 Section3 ."
+        ". Section4 Section4 Section4 ."
+        ". . . . .";
+    margin-bottom: 25px;
+}
 
 
-  
-  .Section1 {
+
+.Section1 {
     background-color: #ebebeb;
     border-radius: 10px;
-    grid-area: Section1; 
+    grid-area: Section1;
     text-align: center;
     align-self: center;
     margin: 15px 0px 0px 1px;
 }
-  
-  .Section2 {
+
+.Section2 {
     background-color: #ebebeb;
     border-radius: 10px;
-    grid-area: Section2; 
+    grid-area: Section2;
     text-align: center;
     align-self: center;
     margin: 15px 0px 0px 1px;
 }
-  
-  .Section3 { 
+
+.Section3 {
     background-color: #ebebeb;
     border-radius: 10px;
-    grid-area: Section3; 
+    grid-area: Section3;
     text-align: center;
     align-self: center;
     margin: 15px 0px 0px 1px;
 }
-    .Section4 { 
+
+.Section4 {
     background-color: #ebebeb;
     border-radius: 10px;
     grid-area: Section4;
@@ -384,26 +372,26 @@ li{
     align-self: center;
 }
 
-.Section1 p{
+.Section1 p {
     font-size: .9rem;
 }
 
-.Section2 p{
+.Section2 p {
     font-size: .9rem;
 }
 
-.Section3 p{
+.Section3 p {
     font-size: .9rem;
 }
-  
+
 
 /*? Imagen de wasap*/
 
-.whatsapp-img{
+.whatsapp-img {
     width: 50px;
 }
 
-.whatsapp img{
+.whatsapp img {
     width: 50px;
     position: fixed;
     bottom: 120px;
@@ -411,7 +399,124 @@ li{
     transition: all 1s ease;
 }
 
-.whatsapp:hover{
+.whatsapp:hover {
     cursor: pointer;
 }
 
+@media screen and (max-width: 900px) {
+
+    nav button {
+        display: none;
+        padding-left: 10px;
+    }
+
+    nav .nav-logo {
+        display: none;
+    }
+
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+        color: black;
+    }
+
+    .hero h3 {
+        font-size: 1.5em;
+        color: black;
+    }
+
+    .hero {
+        background-image: none;
+    }
+
+    .programs-container .img-container {
+        flex-direction: column;
+    }
+
+    .Img {
+        width: 80%;
+        margin: 25px 15px 25px 15px;
+    }
+
+    .text-container .checklist {
+        flex-direction: column;
+    }
+
+    .merch-text {
+        font-size: 2em;
+    }
+
+    .merch-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Area1 img {
+        width: 500px;
+        height: 500px;
+    }
+
+    .Area2 img {
+        height: 400px;
+        width: 400px;
+    }
+
+    .Area3 img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .Area4 img {
+        height: 300px;
+        width: 500px;
+    }
+
+    .Area5 img {
+        transform: rotate(0deg);
+        width: 500px;
+    }
+
+    .grid-container h2 {
+        padding: 5px;
+    }
+
+
+
+    .grid-container p {
+        font-size: 0.9em;
+        padding: 5px;
+    }
+
+    .whatsapp {
+        display: none;
+    }
+}
+
+/**! Final pagina 1 Y empieza la segunda**/
+
+.hero-two{
+    display: flex;
+    height: 1300px;
+    width: 100%;
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("/img/cierre-digital-dispositivo-equipo-exito.jpg");
+    background-size: 2700px 1300px;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-two h2{
+    color: white;
+    font-size: 4em;
+}
+
+.hero-two h3{
+    color: white;
+}
