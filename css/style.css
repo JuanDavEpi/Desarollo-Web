@@ -126,11 +126,12 @@ nav {
 
 .hero h2 {
     color: white;
-    font-size: 4em;
+    font-size: 3vw;
 }
 
 .hero h3 {
     color: white;
+    font-size: 2vw;
 }
 
 /**! Programas **/
@@ -419,6 +420,10 @@ li {
         justify-content: center;
     }
 
+    .enlace{
+        font-size: 2vw;
+    }
+
     .hero h2 {
         font-size: 2em;
         color: black;
@@ -520,3 +525,112 @@ li {
 .hero-two h3{
     color: white;
 }
+
+/**! SECCION DE MERCANCIA**/
+
+
+.products-all{
+    height: 3000px;
+    background-color: #464646;
+    margin-bottom: 25px;
+}
+
+.products-all h1{
+    color: white;
+    font-size: 3em;
+    padding: 45px 0px 25px 0px;
+}
+
+.products-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.products-item{
+    display: flex;
+    height: 500px;
+    width: 1700px;
+    background-color: #4e4e4e;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.products-item h3{
+    color: white;
+    display: inline-block;
+    padding: 25px 5px 25px 25px;
+
+}
+
+.products-item p{
+    color: white;
+    display: inline-block;
+    padding: 25px 5px 25px 25px;
+}
+
+.products-item img{
+    height: 100%;
+    width: 700px;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 900px) {
+    nav {
+        justify-content: center;
+    }
+
+    .enlace{
+        font-size: 2vw;
+    }
+
+    .hero-two h2 {
+        font-size: 5vw;
+        color: black;
+    }
+
+    .hero-two h3 {
+        font-size: .0.5em;
+        color: black;
+    }
+
+    .hero-two {
+        background-image: none;
+    }
+
+    .products-all{
+        height: 100%;
+    }
+
+    .products-container .products-item{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .products-item {
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        height: auto; /* Permite que la altura se ajuste al contenido */
+        width: 400px;
+        align-self: center;
+        text-align: center;
+    }
+
+    .products-item h3,
+    .products-item p {
+        padding: 15px;
+        font-size: 3vw;
+    }
+
+    .products-item img{
+        align-self: center;
+        width: 100%;
+    }
+
+
+}
+
+
+
