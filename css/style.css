@@ -56,9 +56,7 @@ nav {
     gap: 2rem;
 }
 
-.nav-logo {
-    max-width: 70px;
-}
+
 
 .links-del-nav {
     list-style: none;
@@ -72,6 +70,7 @@ nav {
     padding-bottom: 0.75rem;
     color: #000000;
 }
+
 
 /** Hover para los links, **/
 
@@ -106,8 +105,6 @@ nav {
     background-color: #cf1b1b;
     transform: scale(1.1);
 }
-
-
 
 /*!Seccion HERO*/
 
@@ -613,7 +610,7 @@ li {
     width: 100%;
     background-image: linear-gradient(0deg,
             rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)), url("/img/cierre-digital-dispositivo-equipo-exito.jpg");
+            rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/1181717/pexels-photo-1181717.jpeg?cs=srgb&dl=pexels-divinetechygirl-1181717.jpg&fm=jpg");
     background-size: 2700px 1300px;
     background-repeat: no-repeat;
     justify-content: center;
@@ -631,16 +628,16 @@ li {
 }
 
 .about {
-    height: 1050px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
 }
 
 .about h2 {
     text-align: center;
-    padding: 120px 0 25px 0;
+    padding: 120px 25px;
 }
 
 .about p {
@@ -653,7 +650,7 @@ li {
     display: flex;
     align-items: center;
     padding: 50px 0px 25px;
-    background-color: #f3f3f3;
+    background-color: #fcfcfc;
     border-radius: 15px;
     flex-direction: row;
 }
@@ -663,7 +660,6 @@ li {
     width: 600px;
     border-radius: 25px;
     padding: 0px 5px;
-
 }
 
 .about-text p {
@@ -732,4 +728,63 @@ li {
             width: 80%;
         }
     } 
+}
+
+/**!Cuarta Pagina**/
+
+.hero-four {
+    display: flex;
+    height: 1200px;
+    width: 100%;
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("https://www.europarl.europa.eu/resources/library/images/20220404PHT26610/20220404PHT26610_original.jpg");
+    background-size: 2700px 1300px;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-four h2 {
+    color: white;
+    font-size: 4em;
+}
+
+.hero-four h3 {
+    color: white;
+}
+
+.title{
+    margin: 45px;
+    text-align: center;
+}
+
+.service-container{
+    display: flex;
+    height: 200px;
+    background-color: #fcfcfc;
+    margin-bottom: 100px;
+}
+
+.service-container .service-text {
+    margin: 20px;
+    text-align: center;
+}
+
+.services{
+    display: flex;
+    margin: 40px 0;
+    justify-content: space-around;
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.services .cards{
+    text-align: center;
+    margin: 40px;
+}
+
+.services .cards p{
+    width: 400px;
 }

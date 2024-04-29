@@ -1,14 +1,44 @@
+//!Variables
+
+$colores: (
+  rojo: #ac1c1c,
+  gris: #f5f5f5,
+  gris-oscuro: #ebebeb,
+  negro: #000,
+);
+
+@mixin flex($flex, $justify, $align, $direction) {
+  display: $flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin modos ($dark-mode) {
+  @if $dark-mode == black {
+    background-color: #202020;
+    color: white;
+  } @else {
+    background-color: #f5f5f5;
+    color: black;
+  }
+}
+
+.back-condition{
+  @include modos (black);
+}
+
+//!Primera Pag
+
 .nav-all {
-  background-color: #f5f5f5;
+  background-color: map-get($colores, gris);
   width: 100%;
   position: fixed;
   nav {
     max-width: 1200px;
     margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 2rem;
+    @include flex(flex, center, center, row);
     .links-del-nav {
       list-style: none;
       display: flex;
@@ -17,12 +47,12 @@
       .enlace {
         position: relative;
         padding-bottom: 0.75rem;
-        color: #000000;
+        color: map-get($colores, negro);
         .boton {
           padding: 1rem 2rem;
           font-size: 1rem;
           color: #fff;
-          background-color: #ac1c1c;
+          background-color: map-get($colores, rojo);
           border-radius: 5px;
           cursor: pointer;
           transition: all 0.9s ease;
@@ -33,7 +63,6 @@
 }
 
 .hero {
-  display: flex;
   height: 1300px;
   background-image: linear-gradient(
       0deg,
@@ -42,9 +71,7 @@
     ),
     url("/img/pexels-christina-morillo-1181675.jpg");
   background-size: 2253px 1300px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include flex(flex, center, center, row);
   h2 {
     color: white;
     font-size: 3vw;
@@ -56,7 +83,7 @@
 }
 
 .programs {
-  background-color: #ebebeb;
+  background-color: map-get($colores, gris-oscuro);
   display: flex;
   margin: 0px 0px 25px;
   align-items: center;
@@ -81,51 +108,51 @@
         margin: 50px 10px 50px 10px;
         padding: 15px;
         text-align: center;
-        background-color: #f5f5f5;
+        background-color: map-get($colores, gris);
         border-radius: 15px;
         color: white;
         align-self: center;
         justify-self: center;
         h3 {
-          color: #000;
-        }
-        p {
-          padding-top: 120px;
-          align-self: flex-end;
-        }
-        .boton {
-          margin: 15px;
-        }
-        $background-opacity: 0.5;
-
-        .Img {
-          margin: 15px;
-
-          &:first-child {
-            background-image: linear-gradient(
-                0deg,
-                rgba(0, 0, 0, $background-opacity),
-                rgba(0, 0, 0, $background-opacity)
-              ),
-              url("/img/repair.jpg");
+          color: map-get($colores, negro);
+          p {
+            padding-top: 120px;
+            align-self: flex-end;
           }
-
-          &:nth-child(2) {
-            background-image: linear-gradient(
-                0deg,
-                rgba(0, 0, 0, $background-opacity),
-                rgba(0, 0, 0, $background-opacity)
-              ),
-              url("/img/desk-593327_1920.jpg");
+          .boton {
+            margin: 15px;
           }
+          $background-opacity: 0.5;
 
-          &:nth-child(3) {
-            background-image: linear-gradient(
-                0deg,
-                rgba(0, 0, 0, $background-opacity),
-                rgba(0, 0, 0, $background-opacity)
-              ),
-              url("/img/laptop-2588862_1920.jpg");
+          .Img {
+            margin: 15px;
+
+            &:first-child {
+              background-image: linear-gradient(
+                  0deg,
+                  rgba(0, 0, 0, $background-opacity),
+                  rgba(0, 0, 0, $background-opacity)
+                ),
+                url("/img/repair.jpg");
+            }
+
+            &:nth-child(2) {
+              background-image: linear-gradient(
+                  0deg,
+                  rgba(0, 0, 0, $background-opacity),
+                  rgba(0, 0, 0, $background-opacity)
+                ),
+                url("/img/desk-593327_1920.jpg");
+            }
+
+            &:nth-child(3) {
+              background-image: linear-gradient(
+                  0deg,
+                  rgba(0, 0, 0, $background-opacity),
+                  rgba(0, 0, 0, $background-opacity)
+                ),
+                url("/img/laptop-2588862_1920.jpg");
+            }
           }
         }
       }
@@ -144,16 +171,14 @@
 
 .text-container {
   height: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(flex, center, center, row);
   .checklist {
     display: flex;
     text-align: center;
     justify-content: space-around;
     padding: 50px;
     li {
-      background-color: #f5f5f5;
+      background-color: map-get($colores, gris);
       list-style: none;
       padding: 5px;
       border-radius: 10px;
@@ -241,7 +266,7 @@
 }
 
 .grid-container {
-  background-color: #f5f5f5;
+  background-color: map-get($colores, gris);
   display: grid;
   grid-template-columns: 0fr 1fr 1fr 1fr 0fr;
   grid-template-rows: 1fr 0.25fr 0fr;
@@ -254,7 +279,7 @@
     ". . . . .";
   margin-bottom: 25px;
   .Section1 {
-    background-color: #ebebeb;
+    background-color: map-get($colores, gris-oscuro);
     border-radius: 10px;
     grid-area: Section1;
     text-align: center;
@@ -269,7 +294,7 @@
     }
   }
   .Section2 {
-    background-color: #ebebeb;
+    background-color: map-get($colores, gris-oscuro);
     border-radius: 10px;
     grid-area: Section2;
     text-align: center;
@@ -284,7 +309,7 @@
     }
   }
   .Section3 {
-    background-color: #ebebeb;
+    background-color: map-get($colores, gris-oscuro);
     border-radius: 10px;
     grid-area: Section3;
     text-align: center;
@@ -299,7 +324,7 @@
     }
   }
   .Section4 {
-    background-color: #ebebeb;
+    background-color: map-get($colores, gris-oscuro);
     border-radius: 10px;
     grid-area: Section4;
     text-align: center;
@@ -315,15 +340,13 @@
 
 //!SEGUNDA PAGINA//
 .nav-all {
-  background-color: #f5f5f5;
+  background-color: map-get($colores, gris);
   width: 100%;
   position: fixed;
   nav {
     max-width: 1200px;
     margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(flex, center, center, row);
     gap: 2rem;
     .links-del-nav {
       list-style: none;
@@ -333,12 +356,12 @@
       .enlace {
         position: relative;
         padding-bottom: 0.75rem;
-        color: #000000;
+        color: map-get($colores, negro);
         .boton {
           padding: 1rem 2rem;
           font-size: 1rem;
           color: #fff;
-          background-color: #ac1c1c;
+          background-color: map-get($colores, rojo);
           border-radius: 5px;
           cursor: pointer;
           transition: all 0.9s ease;
@@ -349,7 +372,6 @@
 }
 
 .hero-two {
-  display: flex;
   height: 1300px;
   width: 100%;
   background-image: linear-gradient(
@@ -360,9 +382,7 @@
     url("/img/cierre-digital-dispositivo-equipo-exito.jpg");
   background-size: 2700px 1300px;
   background-repeat: no-repeat;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include flex(flex, center, center, column);
   .hero-two h2 {
     color: white;
     font-size: 4em;
@@ -404,6 +424,98 @@
           border-radius: 5px;
         }
       }
+    }
+  }
+}
+
+//!TERCERA PAGINA
+.nav-all {
+  background-color: map-get($colores, gris);
+  width: 100%;
+  position: fixed;
+  nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include flex(flex, center, center, row);
+    gap: 2rem;
+    .links-del-nav {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      .enlace {
+        position: relative;
+        padding-bottom: 0.75rem;
+        color: map-get($colores, negro);
+        .boton {
+          padding: 1rem 2rem;
+          font-size: 1rem;
+          color: #fff;
+          background-color: map-get($colores, rojo);
+          border-radius: 5px;
+          cursor: pointer;
+          transition: all 0.9s ease;
+        }
+      }
+    }
+  }
+}
+
+.hero-three {
+  height: 1300px;
+  width: 100%;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/img/cierre-digital-dispositivo-equipo-exito.jpg");
+  background-size: 2700px 1300px;
+  background-repeat: no-repeat;
+  @include flex(center, center, center, column);
+  .hero-three h2 {
+    color: white;
+    font-size: 4em;
+    .hero-three h3 {
+      color: white;
+    }
+  }
+}
+
+.about {
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  .about h2 {
+    text-align: center;
+    padding: 120px 25px;
+  }
+  .about p {
+    text-align: center;
+    font-size: 1.3rem;
+    width: 600px;
+    .about img {
+      height: 100%;
+      width: 600px;
+      border-radius: 25px;
+      padding: 0px 5px;
+    }
+  }
+  .about-text {
+    display: flex;
+    align-items: center;
+    padding: 50px 0px 25px;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    flex-direction: row;
+    .about-text p {
+      flex: 1;
+      padding: 0 20px;
     }
   }
 }
