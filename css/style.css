@@ -506,7 +506,6 @@ li {
 /**! SECCION DE MERCANCIA**/
 
 .products-all {
-    text-align: center;
     padding: 20px;
 }
 
@@ -518,8 +517,7 @@ li {
 
 .products-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
 }
 
 
@@ -529,15 +527,25 @@ li {
 }
 
 .products-item img {
-    height: 600px;
-    width: 600px;
-    display: block;
+    height: 800px;
+    width: 800px;
     margin: 0 auto;
 }
 
-.products-text p {
+
+.products-text {
+    display: flex;
+    justify-content: center; /* Alineación horizontal */
+    align-items: center; /* Alineación vertical */
     height: 100%;
+    margin: 20px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.products-text p {
     width: 600px;
+    text-align: center;
 }
 
 
@@ -548,13 +556,13 @@ li {
     margin-top: 10px;
     background-color: #cacaca;
     border-radius: 5px;
+    padding: 3px;
 }
 
 .price:hover {
     color: #cf1b1b;
     cursor: pointer;
 }
-
 
 @media screen and (max-width: 1000px) {
     nav {
@@ -623,10 +631,11 @@ li {
 }
 
 .about {
-    height: 1800px;
+    height: 1050px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .about h2 {
@@ -644,7 +653,7 @@ li {
     display: flex;
     align-items: center;
     padding: 50px 0px 25px;
-    background-color: #e6e6e6;
+    background-color: #f3f3f3;
     border-radius: 15px;
     flex-direction: row;
 }
@@ -652,7 +661,7 @@ li {
 .about img {
     height: 100%;
     width: 600px;
-    border-radius: 15px;
+    border-radius: 25px;
     padding: 0px 5px;
 
 }
@@ -660,4 +669,67 @@ li {
 .about-text p {
     flex: 1;
     padding: 0 20px;
+}
+
+@media screen and (max-width: 1300px) {
+    nav {
+        justify-content: center;
+    }
+
+    .enlace {
+        font-size: 0.8rem;
+    }
+
+    .hero-three h2 {
+        font-size: 5vw;
+        color: black;
+    }
+
+    .hero-three h3 {
+        font-size: 1rem;
+        
+        color: black;
+    }
+
+    .hero-three {
+        background-image: none;
+    }
+
+
+    .about-text  {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .hero-three {
+            height: 700px; /* Ajusta la altura en pantallas más pequeñas */
+        }
+
+        .about{
+            margin-bottom: 300px;
+        }
+    
+        .about h2 {
+            font-size: 3vw; /* Tamaño de fuente más pequeño para títulos en pantallas pequeñas */
+        }
+    
+        .about p {
+            font-size: 3vw;
+            width: 70%; /* Tamaño de fuente más pequeño para texto en pantallas pequeñas */
+        }
+
+        .about-text  {
+            flex-direction: column;
+            width: 80%;
+        }
+
+        .about-text p{
+            width: 70%;
+        }
+
+        .about-text img{
+            width: 80%;
+        }
+    } 
 }
