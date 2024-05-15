@@ -5,6 +5,7 @@ $colores: (
   gris: #f5f5f5,
   gris-oscuro: #ebebeb,
   negro: #000,
+  semi-white: #fcfcfc,
 );
 
 @mixin flex($flex, $justify, $align, $direction) {
@@ -14,7 +15,7 @@ $colores: (
   flex-direction: $direction;
 }
 
-@mixin modos ($dark-mode) {
+@mixin modos($dark-mode) {
   @if $dark-mode == black {
     background-color: #202020;
     color: white;
@@ -24,39 +25,32 @@ $colores: (
   }
 }
 
-.back-condition{
-  @include modos (black);
+.back-condition {
+  @include modos(black);
 }
 
-//!Primera Pag
+//!!!!NAV DE TODAS LAS PAGINAS
 
-.nav-all {
-  background-color: map-get($colores, gris);
-  width: 100%;
-  position: fixed;
-  nav {
-    max-width: 1200px;
-    margin: auto;
-    gap: 2rem;
-    @include flex(flex, center, center, row);
-    .links-del-nav {
+header {
+  @include flex(flex, space-between, center, row);
+  .logo {
+    max-width: 5rem;
+  }
+  .abrir-menu {
+    display: none;
+  }
+  .nav {
+    .cerrar-menu {
+      display: none;
+    }
+    .nav-list {
       list-style: none;
       display: flex;
-      align-items: center;
-      gap: 3rem;
-      .enlace {
+      gap: 1rem;
+      li a {
+        text-decoration: none;
+        color: #1c1c1c;
         position: relative;
-        padding-bottom: 0.75rem;
-        color: map-get($colores, negro);
-        .boton {
-          padding: 1rem 2rem;
-          font-size: 1rem;
-          color: #fff;
-          background-color: map-get($colores, rojo);
-          border-radius: 5px;
-          cursor: pointer;
-          transition: all 0.9s ease;
-        }
       }
     }
   }
@@ -71,7 +65,7 @@ $colores: (
     ),
     url("/img/pexels-christina-morillo-1181675.jpg");
   background-size: 2253px 1300px;
-  @include flex(flex, center, center, row);
+  @include flex(flex, center, center, column);
   h2 {
     color: white;
     font-size: 3vw;
@@ -120,6 +114,13 @@ $colores: (
             align-self: flex-end;
           }
           .boton {
+
+            font-size: 1rem;
+            color: #fff;
+            background-color: #ac1c1c;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.9s ease;
             margin: 15px;
           }
           $background-opacity: 0.5;
@@ -339,37 +340,6 @@ $colores: (
 }
 
 //!SEGUNDA PAGINA//
-.nav-all {
-  background-color: map-get($colores, gris);
-  width: 100%;
-  position: fixed;
-  nav {
-    max-width: 1200px;
-    margin: auto;
-    @include flex(flex, center, center, row);
-    gap: 2rem;
-    .links-del-nav {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-      .enlace {
-        position: relative;
-        padding-bottom: 0.75rem;
-        color: map-get($colores, negro);
-        .boton {
-          padding: 1rem 2rem;
-          font-size: 1rem;
-          color: #fff;
-          background-color: map-get($colores, rojo);
-          border-radius: 5px;
-          cursor: pointer;
-          transition: all 0.9s ease;
-        }
-      }
-    }
-  }
-}
 
 .hero-two {
   height: 1300px;
@@ -392,77 +362,41 @@ $colores: (
   }
 }
 
-.products-all {
+.title {
   text-align: center;
-  padding: 20px;
-  h1 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    .products-item {
-      img {
-        height: 600px;
-        width: 600px;
-        display: block;
-        margin: 0 auto;
-      }
-      .products-text {
-        p {
-          height: 100%;
-          width: 600px;
-        }
-        .price {
-          display: inline-block;
-          font-size: 1.2rem;
-          color: black;
-          margin-top: 10px;
-          background-color: #cacaca;
-          border-radius: 5px;
-        }
+  margin: 70px;
+}
+
+.products {
+  @include flex(flex, space-around, center, column);
+  height: 2800px;
+  padding: 25px;
+  .container {
+    margin: 0px;
+    padding: 10px;
+    background-color: map-get($colores, gris);
+    border-radius: 10px;
+    width: 100%;
+    h2 {
+      padding: 20px;
+    }
+    .container-text {
+      display: flex;
+      align-self: center;
+      justify-self: center;
+      padding: 20px;
+      width: 100%;
+      .container-img a {
+        justify-self: flex-start;
+        align-self: flex-end;
+        color: map-get($colores, rojo);
+        padding: 20px;
       }
     }
   }
 }
 
 //!TERCERA PAGINA
-.nav-all {
-  background-color: map-get($colores, gris);
-  width: 100%;
-  position: fixed;
-  nav {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include flex(flex, center, center, row);
-    gap: 2rem;
-    .links-del-nav {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-      .enlace {
-        position: relative;
-        padding-bottom: 0.75rem;
-        color: map-get($colores, negro);
-        .boton {
-          padding: 1rem 2rem;
-          font-size: 1rem;
-          color: #fff;
-          background-color: map-get($colores, rojo);
-          border-radius: 5px;
-          cursor: pointer;
-          transition: all 0.9s ease;
-        }
-      }
-    }
-  }
-}
 
 .hero-three {
   height: 1300px;
@@ -518,4 +452,98 @@ $colores: (
       padding: 0 20px;
     }
   }
+}
+
+//!CUARTA PAGINA
+
+.hero-four {
+  height: 1300px;
+  width: 100%;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/https://www.europarl.europa.eu/resources/library/images/20220404PHT26610/20220404PHT26610_original.jpg");
+  background-size: 2700px 1300px;
+  background-repeat: no-repeat;
+  @include flex(center, center, center, column);
+  .hero-four h2 {
+    color: white;
+    font-size: 4em;
+    .hero-four h3 {
+      color: white;
+    }
+  }
+}
+
+.title {
+  margin: 50px;
+  text-align: center;
+  font-weight: 600;
+  color: map-get($colores, rojo);
+}
+
+.services {
+  @include flex(flex, space-around, center, row);
+  margin: 10px 0;
+  height: 1200px;
+  background-color: map-get($colores, gris-oscuro);
+  .cards {
+    text-align: center;
+    margin: 40px 0;
+    p {
+      width: 400px;
+    }
+    .boton {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #ac1c1c;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.9s ease;
+    }
+  }
+}
+
+.terms{
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 120px 145px;
+  h2{
+    text-align: center;
+    display: block;
+    color: map-get($colores, rojo );
+  }
+}
+
+.slides{
+  height: 1200px;
+  @include flex(flex, space-around, center, row);
+  margin: 100px 0;
+  .slides-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    h2{
+      text-align: center;
+    }
+    .slides-text{
+      margin: 40px 0;
+      text-align: center;
+      width: 600px;
+      .img{
+        width: 200px;
+        height: 200px;
+        margin: 45px 0px 25px 0px;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: map-get($colores, gris);
 }

@@ -2,35 +2,25 @@
   background-color: #202020;
   color: white; }
 
-.nav-all {
-  background-color: #f5f5f5;
-  width: 100%;
-  position: fixed; }
-  .nav-all nav {
-    max-width: 1200px;
-    margin: auto;
-    gap: 2rem;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; }
+  header .logo {
+    max-width: 5rem; }
+  header .abrir-menu {
+    display: none; }
+  header .nav .cerrar-menu {
+    display: none; }
+  header .nav .nav-list {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row; }
-    .nav-all nav .links-del-nav {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 3rem; }
-      .nav-all nav .links-del-nav .enlace {
-        position: relative;
-        padding-bottom: 0.75rem;
-        color: #000; }
-        .nav-all nav .links-del-nav .enlace .boton {
-          padding: 1rem 2rem;
-          font-size: 1rem;
-          color: #fff;
-          background-color: #ac1c1c;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: all 0.9s ease; }
+    gap: 1rem; }
+    header .nav .nav-list li a {
+      text-decoration: none;
+      color: #1c1c1c;
+      position: relative; }
 
 .hero {
   height: 1300px;
@@ -131,11 +121,7 @@
   grid-auto-columns: 2;
   gap: 6px 6px;
   grid-auto-flow: 60%;
-  grid-template-areas: ". . . . ."
- ". Area1 Area1 Area2 ."
- ". Area5 Area3 Area2 ."
- ". Area5 Area4 Area4 ."
- ". . . . ."; }
+  grid-template-areas: ". . . . ." ". Area1 Area1 Area2 ." ". Area5 Area3 Area2 ." ". Area5 Area4 Area4 ." ". . . . ."; }
   .merch-container .Area1 {
     grid-area: Area1;
     align-self: center;
@@ -179,9 +165,7 @@
   grid-auto-columns: 1fr;
   gap: 18px 18px;
   grid-auto-flow: row;
-  grid-template-areas: ". Section1 Section2 Section3 ."
- ". Section4 Section4 Section4 ."
- ". . . . .";
+  grid-template-areas: ". Section1 Section2 Section3 ." ". Section4 Section4 Section4 ." ". . . . .";
   margin-bottom: 25px; }
   .grid-container .Section1 {
     background-color: #ebebeb;
@@ -230,36 +214,6 @@
     .grid-container .Section4 p {
       color: black; }
 
-.nav-all {
-  background-color: #f5f5f5;
-  width: 100%;
-  position: fixed; }
-  .nav-all nav {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 2rem; }
-    .nav-all nav .links-del-nav {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 3rem; }
-      .nav-all nav .links-del-nav .enlace {
-        position: relative;
-        padding-bottom: 0.75rem;
-        color: #000; }
-        .nav-all nav .links-del-nav .enlace .boton {
-          padding: 1rem 2rem;
-          font-size: 1rem;
-          color: #fff;
-          background-color: #ac1c1c;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: all 0.9s ease; }
-
 .hero-two {
   height: 1300px;
   width: 100%;
@@ -276,64 +230,36 @@
   .hero-two .hero-two h3 {
     color: white; }
 
-.products-all {
+.title {
   text-align: center;
-  padding: 20px; }
-  .products-all h1 {
-    margin-top: 20px;
-    margin-bottom: 20px; }
-  .products-all .products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; }
-    .products-all .products-container .products-item img {
-      height: 600px;
-      width: 600px;
-      display: block;
-      margin: 0 auto; }
-    .products-all .products-container .products-item .products-text p {
-      height: 100%;
-      width: 600px; }
-    .products-all .products-container .products-item .products-text .price {
-      display: inline-block;
-      font-size: 1.2rem;
-      color: black;
-      margin-top: 10px;
-      background-color: #cacaca;
-      border-radius: 5px; }
+  margin: 70px; }
 
-.nav-all {
-  background-color: #f5f5f5;
-  width: 100%;
-  position: fixed; }
-  .nav-all nav {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 2rem; }
-    .nav-all nav .links-del-nav {
-      list-style: none;
+.products {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 2800px;
+  padding: 25px; }
+  .products .container {
+    margin: 0px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    width: 100%; }
+    .products .container h2 {
+      padding: 20px; }
+    .products .container .container-text {
       display: flex;
-      align-items: center;
-      gap: 3rem; }
-      .nav-all nav .links-del-nav .enlace {
-        position: relative;
-        padding-bottom: 0.75rem;
-        color: #000; }
-        .nav-all nav .links-del-nav .enlace .boton {
-          padding: 1rem 2rem;
-          font-size: 1rem;
-          color: #fff;
-          background-color: #ac1c1c;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: all 0.9s ease; }
+      align-self: center;
+      justify-self: center;
+      padding: 20px;
+      width: 100%; }
+      .products .container .container-text .container-img a {
+        justify-self: flex-start;
+        align-self: flex-end;
+        color: #ac1c1c;
+        padding: 20px; }
 
 .hero-three {
   height: 1300px;
@@ -379,3 +305,94 @@
     .about .about-text .about-text p {
       flex: 1;
       padding: 0 20px; }
+
+.hero-four {
+  height: 1300px;
+  width: 100%;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/https://www.europarl.europa.eu/resources/library/images/20220404PHT26610/20220404PHT26610_original.jpg");
+  background-size: 2700px 1300px;
+  background-repeat: no-repeat;
+  display: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .hero-four .hero-four h2 {
+    color: white;
+    font-size: 4em; }
+    .hero-four .hero-four h2 .hero-four h3 {
+      color: white; }
+
+.title {
+  margin: 50px;
+  text-align: center;
+  font-weight: 600;
+  color: #ac1c1c; }
+
+.service-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 1200px;
+  background-color: #fcfcfc;
+  margin-bottom: 100px; }
+  .service-container .service-text {
+    margin: 20px;
+    text-align: center;
+    width: 400px; }
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 0;
+  height: 1200px;
+  background-color: #fcfcfc; }
+  .services .cards {
+    text-align: center;
+    margin: 40px; }
+    .services .cards p {
+      width: 400px; }
+    .services .cards .boton {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #ac1c1c;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.9s ease; }
+
+.terms {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 120px 0px 145px; }
+  .terms h2 {
+    text-align: center;
+    display: block;
+    color: #ac1c1c; }
+
+.slides {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px 0;
+  height: 1200px; }
+  .slides .slides-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .slides .slides-container .slides-text {
+      margin: 40px 5px 25px 5px;
+      text-align: center;
+      width: 600px; }
+      .slides .slides-container .slides-text .img {
+        height: 200px;
+        width: 200px;
+        margin: 45px 5px 25px 5px; }
+
+footer {
+  background-color: #f5f5f5; }
