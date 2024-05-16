@@ -6,7 +6,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row; }
+  flex-direction: row;
+  padding: 2rem;
+  background-color: #f5f5f5; }
   header .logo {
     max-width: 5rem; }
   header .abrir-menu {
@@ -21,19 +23,30 @@ header {
       text-decoration: none;
       color: #1c1c1c;
       position: relative; }
+      header .nav .nav-list li a::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #cf1b1b;
+        transition: all 0.3s ease; }
+      header .nav .nav-list li a:hover::after {
+        width: 100%; }
 
 .hero {
   height: 1300px;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/pexels-christina-morillo-1181675.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg");
   background-size: 2253px 1300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row; }
-  .hero h2 {
+  flex-direction: column; }
+  .hero .hero h2 {
     color: white;
     font-size: 3vw; }
-  .hero h3 {
+  .hero .hero h3 {
     color: white;
     font-size: 2vw; }
 
@@ -72,15 +85,24 @@ header {
             padding-top: 120px;
             align-self: flex-end; }
           .programs .programs-container .all-programs-container .Img h3 .boton {
+            font-size: 1rem;
+            color: #fff;
+            background-color: #ac1c1c;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.9s ease;
             margin: 15px; }
+            .programs .programs-container .all-programs-container .Img h3 .boton:hover {
+              background-color: #cf1b1b;
+              transform: scale(1.1); }
           .programs .programs-container .all-programs-container .Img h3 .Img {
             margin: 15px; }
             .programs .programs-container .all-programs-container .Img h3 .Img:first-child {
-              background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/repair.jpg"); }
+              background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg"); }
             .programs .programs-container .all-programs-container .Img h3 .Img:nth-child(2) {
-              background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/desk-593327_1920.jpg"); }
+              background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg"); }
             .programs .programs-container .all-programs-container .Img h3 .Img:nth-child(3) {
-              background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/laptop-2588862_1920.jpg"); }
+              background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg"); }
 
 .Parrafo h2 {
   color: black; }
@@ -121,7 +143,11 @@ header {
   grid-auto-columns: 2;
   gap: 6px 6px;
   grid-auto-flow: 60%;
-  grid-template-areas: ". . . . ." ". Area1 Area1 Area2 ." ". Area5 Area3 Area2 ." ". Area5 Area4 Area4 ." ". . . . ."; }
+  grid-template-areas: ". . . . ."
+ ". Area1 Area1 Area2 ."
+ ". Area5 Area3 Area2 ."
+ ". Area5 Area4 Area4 ."
+ ". . . . ."; }
   .merch-container .Area1 {
     grid-area: Area1;
     align-self: center;
@@ -165,7 +191,9 @@ header {
   grid-auto-columns: 1fr;
   gap: 18px 18px;
   grid-auto-flow: row;
-  grid-template-areas: ". Section1 Section2 Section3 ." ". Section4 Section4 Section4 ." ". . . . .";
+  grid-template-areas: ". Section1 Section2 Section3 ."
+ ". Section4 Section4 Section4 ."
+ ". . . . .";
   margin-bottom: 25px; }
   .grid-container .Section1 {
     background-color: #ebebeb;
@@ -217,7 +245,7 @@ header {
 .hero-two {
   height: 1300px;
   width: 100%;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/cierre-digital-dispositivo-equipo-exito.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2015/05/15/02/07/computer-767781_1280.jpg");
   background-size: 2700px 1300px;
   background-repeat: no-repeat;
   display: flex;
@@ -264,7 +292,7 @@ header {
 .hero-three {
   height: 1300px;
   width: 100%;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/cierre-digital-dispositivo-equipo-exito.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2015/06/24/16/36/office-820390_1280.jpg");
   background-size: 2700px 1300px;
   background-repeat: no-repeat;
   display: center;
@@ -328,30 +356,17 @@ header {
   font-weight: 600;
   color: #ac1c1c; }
 
-.service-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 1200px;
-  background-color: #fcfcfc;
-  margin-bottom: 100px; }
-  .service-container .service-text {
-    margin: 20px;
-    text-align: center;
-    width: 400px; }
-
 .services {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   margin: 10px 0;
   height: 1200px;
-  background-color: #fcfcfc; }
+  background-color: #ebebeb; }
   .services .cards {
     text-align: center;
-    margin: 40px; }
+    margin: 40px 0; }
     .services .cards p {
       width: 400px; }
     .services .cards .boton {
@@ -367,32 +382,175 @@ header {
   display: flex;
   height: 100%;
   justify-content: center;
-  margin: 120px 0px 145px; }
+  margin: 120px 145px; }
   .terms h2 {
     text-align: center;
     display: block;
     color: #ac1c1c; }
 
 .slides {
+  height: 1200px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
-  margin: 100px 0;
-  height: 1200px; }
+  flex-direction: row;
+  margin: 100px 0; }
   .slides .slides-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    flex-direction: column; }
+    align-self: center; }
+    .slides .slides-container h2 {
+      text-align: center; }
     .slides .slides-container .slides-text {
-      margin: 40px 5px 25px 5px;
+      margin: 40px 0;
       text-align: center;
       width: 600px; }
       .slides .slides-container .slides-text .img {
-        height: 200px;
         width: 200px;
-        margin: 45px 5px 25px 5px; }
+        height: 200px;
+        margin: 45px 0px 25px 0px; }
+
+.hero-five {
+  height: 1300px;
+  width: 100%;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg");
+  background-size: 2700px 1300px;
+  background-repeat: no-repeat;
+  display: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .hero-five .hero-five h2 {
+    color: white;
+    font-size: 4em; }
+    .hero-five .hero-five h2 .hero-five h3 {
+      color: white; }
+
+.faq {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row; }
+  .faq .qs {
+    display: flex;
+    flex-direction: column;
+    margin: 50px; }
+    .faq .qs .question {
+      display: flex; }
+      .faq .qs .question .question-text {
+        display: flex;
+        align-items: center; }
+        .faq .qs .question .question-text p {
+          width: 500px; }
+        .faq .qs .question .question-text img {
+          height: 120px;
+          width: 140px; }
 
 footer {
   background-color: #f5f5f5; }
+
+@media screen and (max-width: 815px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer; }
+    .abrir-menu.abrir-menu,
+    .cerrar-menu.abrir-menu {
+      color: #1c1c1c; }
+    .abrir-menu.cerrar-menu,
+    .cerrar-menu.cerrar-menu {
+      color: #302f2f; }
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5); }
+    .nav.visible {
+      opacity: 1;
+      visibility: visible; }
+  .nav-list {
+    flex-direction: column;
+    align-items: end; }
+    .nav-list li a {
+      color: #000000ec; } }
+
+@media screen and (max-width: 1200px) {
+  .hero h2 {
+    font-size: 2em; }
+  .hero h3 {
+    font-size: 1.5em; }
+  .programs-container .img-container {
+    flex-direction: column; }
+  .Img {
+    width: 80%;
+    margin: 25px 15px 25px 15px; }
+  .text-container .checklist {
+    flex-direction: column; }
+  .merch-text {
+    font-size: 2em; }
+  .merch-container {
+    display: flex;
+    flex-direction: column; }
+  .Area1 img {
+    width: 300px;
+    height: 300px; }
+  .Area2 img,
+  .Area3 img {
+    height: 200px;
+    width: 200px; }
+  .Area4 img {
+    height: 200px;
+    width: 400px; }
+  .Area5 img {
+    transform: rotate(0deg);
+    width: 400px; }
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px; }
+  .grid-container h2 {
+    padding: 5px; }
+  .grid-container p {
+    font-size: 0.9em;
+    padding: 5px; } }
+
+@media screen and (max-width: 490px) {
+  .hero {
+    background-image: none; }
+  .hero h2,
+  .hero h3 {
+    color: black; }
+  .checklist {
+    padding: 10px; } }
+
+@media screen and (max-width: 920px) {
+  .products {
+    height: 4500px; }
+  .container-text {
+    flex-direction: column;
+    width: 70%; } }
+
+@media screen and (max-width: 490px) {
+  .hero-two {
+    background-image: none; }
+  .hero-two h2 {
+    color: black;
+    font-size: 2em; }
+  .hero-two h3 {
+    color: black; }
+  .container-text {
+    width: 500px; } }

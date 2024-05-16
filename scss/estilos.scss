@@ -33,6 +33,8 @@ $colores: (
 
 header {
   @include flex(flex, space-between, center, row);
+  padding: 2rem;
+  background-color: map-get($colores, gris);
   .logo {
     max-width: 5rem;
   }
@@ -51,6 +53,19 @@ header {
         text-decoration: none;
         color: #1c1c1c;
         position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 1px;
+          width: 0;
+          bottom: 0;
+          left: 0;
+          background-color: #cf1b1b;
+          transition: all 0.3s ease;
+        }
+        &:hover::after {
+          width: 100%;
+        }
       }
     }
   }
@@ -63,14 +78,14 @@ header {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("/img/pexels-christina-morillo-1181675.jpg");
+    url("https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg");
   background-size: 2253px 1300px;
   @include flex(flex, center, center, column);
-  h2 {
+  .hero h2 {
     color: white;
     font-size: 3vw;
   }
-  h3 {
+  .hero h3 {
     color: white;
     font-size: 2vw;
   }
@@ -114,7 +129,6 @@ header {
             align-self: flex-end;
           }
           .boton {
-
             font-size: 1rem;
             color: #fff;
             background-color: #ac1c1c;
@@ -122,6 +136,10 @@ header {
             cursor: pointer;
             transition: all 0.9s ease;
             margin: 15px;
+            &:hover {
+              background-color: #cf1b1b;
+              transform: scale(1.1);
+            }
           }
           $background-opacity: 0.5;
 
@@ -349,7 +367,7 @@ header {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("/img/cierre-digital-dispositivo-equipo-exito.jpg");
+    url("https://cdn.pixabay.com/photo/2015/05/15/02/07/computer-767781_1280.jpg");
   background-size: 2700px 1300px;
   background-repeat: no-repeat;
   @include flex(flex, center, center, column);
@@ -406,7 +424,7 @@ header {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("/img/cierre-digital-dispositivo-equipo-exito.jpg");
+    url("https://cdn.pixabay.com/photo/2015/06/24/16/36/office-820390_1280.jpg");
   background-size: 2700px 1300px;
   background-repeat: no-repeat;
   @include flex(center, center, center, column);
@@ -507,35 +525,35 @@ header {
   }
 }
 
-.terms{
+.terms {
   display: flex;
   height: 100%;
   justify-content: center;
   margin: 120px 145px;
-  h2{
+  h2 {
     text-align: center;
     display: block;
-    color: map-get($colores, rojo );
+    color: map-get($colores, rojo);
   }
 }
 
-.slides{
+.slides {
   height: 1200px;
   @include flex(flex, space-around, center, row);
   margin: 100px 0;
-  .slides-container{
+  .slides-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-self: center;
-    h2{
+    h2 {
       text-align: center;
     }
-    .slides-text{
+    .slides-text {
       margin: 40px 0;
       text-align: center;
       width: 600px;
-      .img{
+      .img {
         width: 200px;
         height: 200px;
         margin: 45px 0px 25px 0px;
@@ -544,6 +562,219 @@ header {
   }
 }
 
+//! QUINTA PAG
+
+.hero-five {
+  height: 1300px;
+  width: 100%;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg");
+  background-size: 2700px 1300px;
+  background-repeat: no-repeat;
+  @include flex(center, center, center, column);
+  .hero-five h2 {
+    color: white;
+    font-size: 4em;
+    .hero-five h3 {
+      color: white;
+    }
+  }
+}
+
+.faq{
+  height: 100px;
+  @include flex(flex, space-around, center, row);
+  .qs{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    .question{
+      display: flex;
+      .question-text{
+        display: flex;
+        align-items: center;
+        p{
+          width: 500px;
+        }
+        img{
+          height: 120px;
+          width: 140px;
+        }
+      }
+    }
+  }
+}
+
+
 footer {
   background-color: map-get($colores, gris);
+}
+
+
+//? MEDIA QUERYS
+
+@media screen and (max-width: 815px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+
+    &.abrir-menu {
+      color: #1c1c1c;
+    }
+
+    &.cerrar-menu {
+      color: #302f2f;
+    }
+  }
+
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: end;
+
+    li a {
+      color: #000000ec;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero h2 {
+    font-size: 2em;
+  }
+
+  .hero h3 {
+    font-size: 1.5em;
+  }
+
+  .programs-container .img-container {
+    flex-direction: column;
+  }
+
+  .Img {
+    width: 80%;
+    margin: 25px 15px 25px 15px;
+  }
+
+  .text-container .checklist {
+    flex-direction: column;
+  }
+
+  .merch-text {
+    font-size: 2em;
+  }
+
+  .merch-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Area1 img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .Area2 img,
+  .Area3 img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .Area4 img {
+    height: 200px;
+    width: 400px;
+  }
+
+  .Area5 img {
+    transform: rotate(0deg);
+    width: 400px;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .grid-container h2 {
+    padding: 5px;
+  }
+
+  .grid-container p {
+    font-size: 0.9em;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .hero {
+    background-image: none;
+  }
+
+  .hero h2,
+  .hero h3 {
+    color: black;
+  }
+
+  .checklist {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .products {
+    height: 4500px;
+  }
+
+  .container-text {
+    flex-direction: column;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .hero-two {
+    background-image: none;
+  }
+
+  .hero-two h2 {
+    color: black;
+    font-size: 2em;
+  }
+
+  .hero-two h3 {
+    color: black;
+  }
+
+  .container-text {
+    width: 500px;
+  }
 }
