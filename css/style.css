@@ -151,7 +151,7 @@ li a:hover::after {
     height: 1300px;
     background-image: linear-gradient(0deg,
             rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg");
+            rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2016/06/25/12/52/laptop-1478822_1280.jpg");
     background-size: 2600px 1300px;
     background-repeat: no-repeat;
     justify-content: center;
@@ -495,6 +495,7 @@ li {
 
     .hero{
         background-image: none;
+        height: 1200px;
     }
 
     .hero h2{
@@ -546,14 +547,15 @@ li {
     flex-direction: column;
     padding: 15px;
     margin: 25px;
+    background-color: #f5f5f5;
 }
 
 .products .container{
     margin: 25px;
     padding: 10px;
-    background-color: #f5f5f5;
     border-radius: 10px;
     width: 100%;
+    background-color: white;
 }
 
 .products .container h2{
@@ -589,6 +591,10 @@ li {
 }
 
 @media screen and (max-width: 490px){
+
+    .hero-two{
+        height: 1200px;
+    }
 
     .hero-two{
         background-image: none;
@@ -723,8 +729,11 @@ li {
 }
 
     @media screen and (max-width: 500px){
+
+
         .hero-three{
             background-image: none;
+            height: 1200px;
         }
     }
 
@@ -793,7 +802,7 @@ li {
 }
 
 .slides{
-    height: 1200px;
+    height: 100%;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -846,6 +855,7 @@ footer{
 
 @media screen and (max-width: 615px){
     .hero-four{
+        height: 1200px;
         background-image: none
     }
 
@@ -970,7 +980,8 @@ footer{
 @media screen and (max-width: 680px){
 
     .hero-five{
-        background-image: none
+        background-image: none;
+        height: 1200px;
     }
 
     .hero-five h2{
